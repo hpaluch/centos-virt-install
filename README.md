@@ -117,4 +117,10 @@ There are two problems this approach:
   vda disk device)
 
 
+## Bugs
+
+* KVM/Qemu seems to sometimes change ownership/permissions of floppy
+  file `/var/local/floppies/kickstart.img` - to recreate kickstart floppy fix that permissions
+  or run `10_prepare_ks_floppy.sh` via sudo ...
+* Guest should disconnect floppy after install (to avoid sharing conflicts...)
 
