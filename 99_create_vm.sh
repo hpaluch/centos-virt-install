@@ -29,7 +29,7 @@ virt-install \
               --ram 768 \
               --disk "$disk,size=8,sparse=true" \
 	      --disk "$fd,device=floppy" \
-              --disk "$distiso,device=cdrom" \
+              --disk "$distiso,device=cdrom,shareable=true" \
               --vnc \
               --location $distdir \
               -x "text ks=floppy FQDN=$vm.kvm.dom"
