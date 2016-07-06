@@ -26,7 +26,7 @@ sudo apt-get install mtools
 ```bash
 sudo mkdir /var/local/floppies
 sudo chgrp libvirtd /var/local/floppies
-sudo chmod g+w sudo chmod g+w  /var/local/floppies
+sudo chmod g+w  /var/local/floppies
 ```
 
 * Add to your `/etc/mtools.conf` new line:
@@ -93,6 +93,16 @@ disk="/opt/virtual-images/KVM/${vm}.raw"
 ./99_create_vm.sh mycentos1
 ```
 
+
+## FAQ
+
+# Why don't use `--location ISO` to avoid need for expanded ISO tree?
+
+There are two problems this approach:
+
+* `virt-install` would need root privileges in such case (because it uses `mount` command)
+* running `virt-install` messes up disk drive permissions (CentOS guest would be unable to find
+  vda disk device)
 
 
 
