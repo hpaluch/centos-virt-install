@@ -1,4 +1,4 @@
-### CentOS guest automated install using virt-install
+# CentOS guest automated install using virt-install
 
 Here are sample scripts how to do fully automated installation
 of CentOS guest in KVM using `virt-install`.
@@ -108,7 +108,7 @@ grep rootpw centos6-wipe-disk-ks.cfg
 
 ## FAQ
 
-# Why don't use `--location ISO` to avoid need for expanded ISO tree?
+### Why don't use `--location ISO` to avoid need for expanded ISO tree?
 
 There are two problems this approach:
 
