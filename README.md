@@ -113,7 +113,7 @@ grep rootpw centos6-wipe-disk-ks.cfg
 There are two problems this approach:
 
 * `virt-install` would need root privileges in such case (because it uses `mount` command)
-* running `virt-install` messes up disk drive permissions (CentOS guest would be unable to find
+* running `virt-install` as root messes up disk drive permissions (CentOS guest would be unable to find
   vda disk device)
 
 
