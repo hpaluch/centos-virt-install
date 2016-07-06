@@ -93,6 +93,18 @@ disk="/opt/virtual-images/KVM/${vm}.raw"
 ./99_create_vm.sh mycentos1
 ```
 
+> To find guest root password use this command:
+```bash
+grep rootpw centos6-wipe-disk-ks.cfg
+```
+
+> NOTE: after every change of `centos6-wipe-disk-ks.cfg` you need to
+> recreate kickstart floppy image using script:
+
+```bash
+./10_prepare_ks_floppy.sh
+```
+
 
 ## FAQ
 
