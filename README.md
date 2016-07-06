@@ -51,7 +51,7 @@ ks       cfg      1304 2016-07-06  11:52
 
 ```
 
-* Get CentOS 6.7 ISO image (DVD) and save it into proper location.
+* Get CentOS 6.6 ISO image (DVD) and save it into proper location.
   These scripts expect:
 ```
 /opt/install/OS/CentOS6.6/CentOS-6.6-x86_64-bin-DVD1.iso
@@ -70,6 +70,13 @@ dr-xr-xr-x 2 root root 686080 Oct 24  2014 Packages
 ...
 ```
 
+* Create directory for VM disks:
+```bash
+sudo mkdir -p /opt/virtual-images/KVM
+sudo chgrp libvirtd /opt/virtual-images/KVM
+sudo chmod g+rwxs /opt/virtual-images/KVM
+```
+
 * Verify settings in `99_create_vm.sh` especially pathnames:
 ```
 ...
@@ -77,8 +84,9 @@ distiso=/opt/install/OS/CentOS6.6/CentOS-6.6-x86_64-bin-DVD1.iso
 distdir=/isos/centos6_dvd1
 fd=/var/local/floppies/kickstart.img
 ...
+disk="/opt/virtual-images/KVM/${vm}.raw"
+...
 ```
-
 
 * Finally you can create vm using command like:
 ```bash
