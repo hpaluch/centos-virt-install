@@ -116,6 +116,12 @@ There are two problems this approach:
 * running `virt-install` as root messes up disk drive permissions (CentOS guest would be unable to find
   vda disk device)
 
+### Why using kickstart floppies (instead of http)
+
+Using floppies (and local ISO cdrom file) avoids dependence on network configuration while
+installing guest
+
+
 
 ## Bugs
 
