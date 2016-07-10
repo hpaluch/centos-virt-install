@@ -11,7 +11,7 @@ The host OS (physical computer) is expected to be Ubuntu 16.04 LTS, 64-bit.
 ```bash
 sudo apt-get install virt-manager qemu-kvm libvirt-bin \
                      ubuntu-vm-builder bridge-utils virt-viewer \
-                     virt-install
+                     virtinst
 ``` 
 
 > Please Logout/Login to ensure that you are member of new
